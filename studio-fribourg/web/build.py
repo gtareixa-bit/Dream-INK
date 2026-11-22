@@ -9,7 +9,7 @@ L={
  old='Anciennement Buda Tattoo',cta='Réserver une consultation',
  s1='Tout change. Le talent reste.',p1='Dream Ink Studio est la nouvelle identité de Buda Tattoo : la même équipe, cinq ans d\'expérience à Fribourg, et une exigence portée à un autre niveau.',
  cards=[('Plus de soin','Chaque projet est pensé avec vous, de la première idée au dernier détail.'),('Plus de détail','Un dessin créé sur mesure, pour une pièce qui n\'appartient qu\'à vous.'),('Plus d\'âme','Un studio à notre image : sobre, chaleureux, exigeant.')],
- sp='Comment ça se passe',steps=['Vous nous racontez votre idée.','Nous dessinons ensemble votre projet.','Vous réservez votre séance.','Nous prenons soin de vous, avant, pendant et après.'],
+ fq='Buda Tattoo, qu\'est-ce qui change ?',fa='Buda Tattoo est devenu Dream Ink Studio, à Fribourg. Le nom et le symbole changent ; l\'équipe et la passion restent les mêmes. Vous nous avez connus sous le nom de Buda Tattoo : vous êtes au bon endroit.',sp='Comment ça se passe',steps=['Vous nous racontez votre idée.','Nous dessinons ensemble votre projet.','Vous réservez votre séance.','Nous prenons soin de vous, avant, pendant et après.'],
  sc='Réserver',cp='Écrivez-nous pour une première consultation.',
  lab=dict(phone='Téléphone',email='E-mail',address='Adresse',instagram='Instagram',booking='Prendre rendez-vous'),
  foot='Dream Ink Studio · Fribourg · Suisse',alt='pt',altl='Português',altp='pt/'),
@@ -19,7 +19,7 @@ L={
  old='Antigo Buda Tattoo',cta='Marcar consulta',
  s1='Tudo muda. O talento fica.',p1='O Dream Ink Studio é a nova identidade do Buda Tattoo: a mesma equipa, cinco anos de experiência em Friburgo e uma exigência levada a outro nível.',
  cards=[('Mais cuidado','Cada projeto é pensado contigo, da primeira ideia ao último detalhe.'),('Mais detalhe','Um desenho feito à medida, para uma peça que é só tua.'),('Mais alma','Um estúdio à nossa imagem: sóbrio, acolhedor, exigente.')],
- sp='Como funciona',steps=['Contas-nos a tua ideia.','Desenhamos o projeto em conjunto.','Marcas a tua sessão.','Cuidamos de ti antes, durante e depois.'],
+ fq='Buda Tattoo, o que muda?',fa='O Buda Tattoo passou a Dream Ink Studio, em Friburgo. O nome e o símbolo mudam; a equipa e a paixão ficam. Conheceste-nos como Buda Tattoo: estás no sítio certo.',sp='Como funciona',steps=['Contas-nos a tua ideia.','Desenhamos o projeto em conjunto.','Marcas a tua sessão.','Cuidamos de ti antes, durante e depois.'],
  sc='Marcar',cp='Escreve-nos para uma primeira consulta.',
  lab=dict(phone='Telefone',email='E-mail',address='Morada',instagram='Instagram',booking='Marcar online'),
  foot='Dream Ink Studio · Friburgo · Suíça',alt='fr',altl='Français',altp='../'),
@@ -49,6 +49,7 @@ for k,t in L.items():
 <h1 class="gold">{t['h1']}</h1><p class="studio">{t['st']}</p><p class="tag">{t['tag']}</p><p class="old">{t['old']}</p>
 <a class="btn" href="#contact">{t['cta']}</a></div></section>
 <section class="wrap"><h2>{t['s1']}</h2><p class="lead">{t['p1']}</p><div class="cards">{cards}</div></section>
+<section class="wrap"><h2>{t['fq']}</h2><p class="lead">{t['fa']}</p></section>
 <section class="wrap proc"><h2>{t['sp']}</h2><ol>{steps}</ol></section>
 <section class="wrap" id="contact"><h2>{t['sc']}</h2><p class="lead">{t['cp']}</p><ul class="contact">{contact}</ul></section>
 </main><footer><img src="{b}assets/logo-monogram.png" alt="" width="56" height="60"><p>{t['foot']}</p></footer>

@@ -1,0 +1,10 @@
+# Ejemplos (ajusta a tu hosting). Objetivo: NO perder el posicionamiento de 5 años.
+# --- Apache (.htaccess), si el dominio cambia: buda-viejo.ch -> dominio nuevo
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?buda-viejo\.ch$ [NC]
+RewriteRule ^(.*)$ https://NUEVO-DOMINIO.ch/$1 [R=301,L]
+# --- Netlify/Vercel (_redirects): páginas antiguas -> equivalentes nuevas
+# /tatouages   /        301
+# /contact     /#contact 301
+# /about       /        301
+# Regla de oro: 1 URL antigua -> 1 URL nueva equivalente (no todo a la home si existe equivalente).
