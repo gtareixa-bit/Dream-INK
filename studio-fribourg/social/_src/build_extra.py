@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Historias extra (teasers, merci, mismo compte, cambia/queda, sondeo, preguntas) + publicaciones de feed 1080x1440."""
-from build_stories import CSS, WAVES, G, H, T, page, dust, LOGO, OUT
+from build_stories import CSS, WAVES, G, H, T, page, dust, LOGO, OUT, FIT
 import random
 POST_WAVES = WAVES.replace('preserveAspectRatio="none"', 'preserveAspectRatio="xMidYMid slice"')
 def post(name, lang, body, seed):
     css = CSS.replace("{}", "100") + "body{width:1080px;height:1440px}.s{height:1440px}"
-    (OUT/f"{name}.html").write_text(f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{css}</style><div class="s">{POST_WAVES}{dust(1080,1440,50,seed)}<div class="frame"></div>{body}<div class="grain"></div></div></html>',encoding="utf-8")
+    (OUT/f"{name}.html").write_text(f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{css}</style><div class="s">{POST_WAVES}{dust(1080,1440,50,seed)}<div class="frame"></div>{body}<div class="grain"></div></div>{FIT}</html>',encoding="utf-8")
 def c(top, txt, cls="sub", extra=""): return f'<div class="c {cls}" style="top:{top}px;{extra}">{txt}</div>'
 def logo(top, w): return f'<img class="logo" src="{LOGO}" style="top:{top}px;width:{w}px">'
 def box(top, h=230): return f'<div class="box" style="top:{top}px;height:{h}px"></div>'
@@ -28,6 +28,31 @@ X = {
   p7=("A tua próxima","tatuagem","começa aqui."),share="Partilha com um amigo de Friburgo",save="Guarda este post",
   swapk="Novo nome · Mesma equipa",swap2="Outro nível.",
   pm=("Obrigado,","Friburgo."),pms="5 anos de confiança.<br>O próximo capítulo começa agora.",ex="Antigo Buda Tattoo")}
+X.update({
+ "en": dict(j3=("Something","is coming."),j2=("A new symbol","is on its way."),j1=("Tomorrow,","everything changes."),cd="Turn on the countdown",
+  merci=("Thank you.","5 years in Fribourg","This new chapter<br>is thanks to you."),
+  same=("Same account.","New name.","You're already in the right place.<br>No need to search for us."),
+  chg="What changes",chg_l=("The name","The symbol","The studio's identity"),stay="What stays",stay_l=("The team","The passion","Fribourg"),
+  poll=("Did you","guess it?"),polls="Poll",q=("A question?","Ask it here — we answer."),
+  p2=("5 years. One team.","One desire:","to go further."),p5="A new symbol.",p5s="I + D · the moon, the ink, the dream",
+  p7=("Your next","tattoo","starts here."),share="Share with a friend in Fribourg",save="Save this post",
+  swapk="New name · Same team",swap2="Next level.",pm=("Thank you,","Fribourg."),pms="5 years of trust.<br>The next chapter starts now.",ex="Formerly Buda Tattoo"),
+ "es": dict(j3=("Algo se está","preparando."),j2=("Llega un","nuevo símbolo."),j1=("Mañana,","todo cambia."),cd="Activa la cuenta atrás",
+  merci=("Gracias.","5 años en Friburgo","Esta nueva etapa<br>es gracias a vosotros."),
+  same=("Misma cuenta.","Nuevo nombre.","Ya estás en el sitio correcto.<br>No hace falta buscarnos."),
+  chg="Lo que cambia",chg_l=("El nombre","El símbolo","La identidad del estudio"),stay="Lo que se queda",stay_l=("El equipo","La pasión","Friburgo"),
+  poll=("¿Lo habías","adivinado?"),polls="Encuesta",q=("¿Una pregunta?","Pregunta aquí — respondemos."),
+  p2=("5 años. Un equipo.","Un deseo:","llegar más lejos."),p5="Un nuevo símbolo.",p5s="I + D · la luna, la tinta, el sueño",
+  p7=("Tu próximo","tatuaje","empieza aquí."),share="Comparte con un amigo de Friburgo",save="Guarda este post",
+  swapk="Nuevo nombre · Mismo equipo",swap2="Otro nivel.",pm=("Gracias,","Friburgo."),pms="5 años de confianza.<br>El próximo capítulo empieza ahora.",ex="Antes Buda Tattoo"),
+ "de": dict(j3=("Etwas","bahnt sich an."),j2=("Ein neues","Symbol naht."),j1=("Morgen ändert","sich alles."),cd="Countdown aktivieren",
+  merci=("Danke.","5 Jahre in Freiburg","Dieses neue Kapitel<br>verdanken wir euch."),
+  same=("Gleicher Account.","Neuer Name.","Du bist schon am richtigen Ort.<br>Du musst uns nicht suchen."),
+  chg="Was sich ändert",chg_l=("Der Name","Das Symbol","Die Identität des Studios"),stay="Was bleibt",stay_l=("Das Team","Die Leidenschaft","Freiburg"),
+  poll=("Hast du es","erraten?"),polls="Umfrage",q=("Eine Frage?","Stell sie hier — wir antworten."),
+  p2=("5 Jahre. Ein Team.","Ein Wunsch:","weiter gehen."),p5="Ein neues Symbol.",p5s="I + D · der Mond, die Tinte, der Traum",
+  p7=("Dein nächstes","Tattoo","beginnt hier."),share="Teile es mit einem Freund aus Freiburg",save="Speichere diesen Post",
+  swapk="Neuer Name · Gleiches Team",swap2="Neues Niveau.",pm=("Danke,","Freiburg."),pms="5 Jahre Vertrauen.<br>Das nächste Kapitel beginnt jetzt.",ex="Früher Buda Tattoo")})
 for l,x in X.items():
     t=T[l]; K=f'<div class="c kick" style="top:150px">%s</div>'
     # ---- historias

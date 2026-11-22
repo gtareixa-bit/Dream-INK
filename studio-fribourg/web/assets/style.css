@@ -30,3 +30,4 @@ h2{font:500 clamp(26px,5vw,38px)/1.2 Cinzel;letter-spacing:.06em;color:var(--g1)
 .contact{list-style:none;margin-top:30px;display:grid;gap:16px}.contact b{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--g2);font-weight:500}.contact a{font-size:20px;text-decoration:none}
 footer{text-align:center;padding:48px 20px 64px;border-top:1px solid rgba(212,169,90,.2);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--g2)}footer img{width:44px;height:auto;margin-bottom:10px}
 @media(max-width:480px){.mk span{display:none}.nav{padding:10px 14px}}
+.nav nav a.cur{color:#fff!important}.nav nav a:not(.btn){font-size:11px!important;letter-spacing:.1em!important}

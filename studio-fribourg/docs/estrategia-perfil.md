@@ -46,3 +46,5 @@ Hora sugerida: 18:00–20:00 (Suiza). Usa el sticker de enlace con la web en `05
 - El fondo de estatuas procede de capturas del sitio: resolución suficiente para pantalla, no para impresión.
 - No se menciona sedación en nada de Fribourg (era un servicio de Valencia con marco médico distinto); no comuniques servicios médicos en Suiza sin validar normativa.
 - Fuentes y datos inventados: ninguno; los 5 años salen de vuestro teaser.
+
+> Idiomas: usa el panel `profile-grid/<idioma>/` según el idioma principal del perfil (FR recomendado para Fribourg; el resto sirve para cuentas/regiones alternativas). Textos y bios en 5 idiomas: `docs/captions.md`.

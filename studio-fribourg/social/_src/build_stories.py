@@ -9,7 +9,7 @@ body{{width:1080px;height:1920px;overflow:hidden}}
 .s{{position:relative;width:1080px;height:1920px;overflow:hidden;background:radial-gradient(ellipse 90% 50% at 70% 35%,#171310,#09090a 65%)}}
 .waves{{position:absolute;inset:0}}
 .frame{{position:absolute;inset:52px;border:2px solid rgba(212,169,90,.6)}}
-.c{{position:absolute;left:0;right:0;text-align:center;color:#fff}}
+.c{{position:absolute;left:0;right:0;text-align:center;color:#fff;white-space:nowrap}}
 .kick{{font:400 32px Montserrat;letter-spacing:.34em;color:#d9b36a;text-transform:uppercase}}
 .mt{{font:500 62px Montserrat;letter-spacing:.02em;text-transform:uppercase}}
 .strike{{position:relative;display:inline-block}}.strike:after{{content:"";position:absolute;left:-5%;right:-5%;top:50%;height:5px;background:linear-gradient(90deg,transparent,#e0b865,#f5e1ae,#e0b865,transparent)}}
@@ -36,9 +36,22 @@ T = {
  "pt": dict(k="Friburgo · 5 anos", same="Mesma equipa · Outro nível", s2=("Um novo","símbolo."), s2s="A lua · a tinta · o sonho",
    s3=("Mais cuidado.","Mais detalhe."),s3g="Mais alma.",s4=("É já em","breve."),s4s="Ativa a contagem decrescente",
    s5=("A tua próxima","tatuagem","começa aqui."),cta="Marcar consulta",bio="Link na bio",loc="Friburgo · Suíça")}
+T.update({
+ "en": dict(k="Fribourg · 5 years", same="Same team · Next level", s2=("A new","symbol."), s2s="The moon · the ink · the dream",
+   s3=("More care.","More detail."),s3g="More soul.",s4=("Coming","soon."),s4s="Turn on the countdown",
+   s5=("Your next","tattoo","starts here."),cta="Book a consultation",bio="Link in bio",loc="Fribourg · Switzerland"),
+ "es": dict(k="Friburgo · 5 años", same="Mismo equipo · Otro nivel", s2=("Un nuevo","símbolo."), s2s="La luna · la tinta · el sueño",
+   s3=("Más cuidado.","Más detalle."),s3g="Más alma.",s4=("Muy","pronto."),s4s="Activa la cuenta atrás",
+   s5=("Tu próximo","tatuaje","empieza aquí."),cta="Reservar consulta",bio="Enlace en la bio",loc="Friburgo · Suiza"),
+ "de": dict(k="Freiburg · 5 Jahre", same="Gleiches Team · Neues Niveau", s2=("Ein neues","Symbol."), s2s="Der Mond · die Tinte · der Traum",
+   s3=("Mehr Sorgfalt.","Mehr Detail."),s3g="Mehr Seele.",s4=("Bald ist","es soweit."),s4s="Countdown aktivieren",
+   s5=("Dein nächstes","Tattoo","beginnt hier."),cta="Termin buchen",bio="Link in der Bio",loc="Freiburg · Schweiz")})
 G='<span class="gold">%s</span>'
+
+FIT="""<script>document.fonts.ready.then(function(){document.querySelectorAll('.c,.cta').forEach(function(e){var n=0;function w(){if(e.classList.contains('cta'))return e.getBoundingClientRect().width;var r=document.createRange();r.selectNodeContents(e);return r.getBoundingClientRect().width}
+while(w()>880&&n++<40){e.style.fontSize=(parseFloat(getComputedStyle(e).fontSize)*0.96)+'px'}})})</script>"""
 def page(name, lang, body, seed):
-    (OUT/f"{name}.html").write_text(f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{CSS.replace("{}","100")}</style><div class="s">{WAVES}{dust(1080,1920,60,seed)}<div class="frame"></div><div style="position:absolute;inset:0;transform:translateY(130px)">{body}</div><div class="grain"></div></div></html>',encoding="utf-8")
+    (OUT/f"{name}.html").write_text(f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{CSS.replace("{}","100")}</style><div class="s">{WAVES}{dust(1080,1920,60,seed)}<div class="frame"></div><div style="position:absolute;inset:0;transform:translateY(130px)">{body}</div><div class="grain"></div></div>{FIT}</html>',encoding="utf-8")
 def H(size,txt,top,extra=""): return f'<div class="c h" style="top:{top}px;font-size:{size}px;{extra}">{txt}</div>'
 for l,t in T.items():
     page(f"01-reveal-{l}",l,f'<div class="c kick" style="top:150px">{t["k"]}</div><img class="logo" src="{LOGO}" style="top:240px;width:290px">'
