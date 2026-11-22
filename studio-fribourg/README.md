@@ -3,7 +3,7 @@
 ```
 studio-fribourg/
 ├─ brand/
-│  ├─ logo/    monograma ID recortado: gold (PNG transparente 2334×2478), white, on-black, avatar 512/1080 + source-original.jpg
+│  ├─ logo/    monograma ID fino (último logo enviado) recortado: gold (PNG transparente 1545×2166), white, on-black, avatar 512/1080 + source-original.jpg
 │  └─ fonts/   Cinzel (títulos) · Cormorant Garamond itálica (frases) · Montserrat (texto)  — OFL, libres
 ├─ web/        sitio listo para subir (FR en /, PT en /pt/). Estático: index.html, config.js, assets/
 ├─ social/

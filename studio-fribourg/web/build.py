@@ -45,7 +45,7 @@ for k,t in L.items():
 <header class="nav"><a class="mk" href="#top"><img src="{b}assets/favicon-192.png" alt="" width="34" height="34"><span>Dream Ink</span></a><nav><a href="{t['altp']}" hreflang="{t['alt']}">{t['altl']}</a><a class="btn sm" href="#contact">{t['nav']}</a></nav></header>
 <main id="top">
 <section class="hero"><div class="plate"></div><div class="in">
-<p class="kick">{t['k']}</p><img class="logo" src="{b}assets/logo-monogram.png" alt="Dream Ink Studio" width="360" height="382">
+<p class="kick">{t['k']}</p><img class="logo" src="{b}assets/logo-monogram.png" alt="Dream Ink Studio" width="260" height="364">
 <h1 class="gold">{t['h1']}</h1><p class="studio">{t['st']}</p><p class="tag">{t['tag']}</p><p class="old">{t['old']}</p>
 <a class="btn" href="#contact">{t['cta']}</a></div></section>
 <section class="wrap"><h2>{t['s1']}</h2><p class="lead">{t['p1']}</p><div class="cards">{cards}</div></section>

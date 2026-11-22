@@ -41,14 +41,14 @@ def page(name, lang, body, seed):
     (OUT/f"{name}.html").write_text(f'<!doctype html><html lang="{lang}"><meta charset="utf-8"><style>{CSS.replace("{}","100")}</style><div class="s">{WAVES}{dust(1080,1920,60,seed)}<div class="frame"></div><div style="position:absolute;inset:0;transform:translateY(130px)">{body}</div><div class="grain"></div></div></html>',encoding="utf-8")
 def H(size,txt,top,extra=""): return f'<div class="c h" style="top:{top}px;font-size:{size}px;{extra}">{txt}</div>'
 for l,t in T.items():
-    page(f"01-reveal-{l}",l,f'<div class="c kick" style="top:150px">{t["k"]}</div><img class="logo" src="{LOGO}" style="top:240px;width:400px">'
+    page(f"01-reveal-{l}",l,f'<div class="c kick" style="top:150px">{t["k"]}</div><img class="logo" src="{LOGO}" style="top:240px;width:290px">'
      f'<div class="c mt" style="top:760px"><span class="strike">Buda Tattoo</span></div>'+H(170,"Dream Ink",840)+H(170,G%"Studio.",1010)+f'<div class="c sub" style="top:1260px">{t["same"]}</div>',11)
-    page(f"02-symbol-{l}",l,f'<div class="c kick" style="top:150px">Dream Ink · Studio</div><img class="logo" src="{LOGO}" style="top:260px;width:660px">'
+    page(f"02-symbol-{l}",l,f'<div class="c kick" style="top:150px">Dream Ink · Studio</div><img class="logo" src="{LOGO}" style="top:250px;width:450px">'
      +H(130,t["s2"][0],1000)+H(130,G%t["s2"][1],1130)+f'<div class="c small" style="top:1380px">{t["s2s"]}</div>',22)
     page(f"03-level-{l}",l,f'<div class="c kick" style="top:150px">{t["same"]}</div>'+H(104,t["s3"][0],560)+H(104,t["s3"][1],690)+H(104,G%t["s3g"],820)
-     +f'<img class="logo" src="{LOGO}" style="top:1180px;width:300px">',33)
-    page(f"04-countdown-{l}",l,f'<div class="c kick" style="top:150px">Dream Ink · Studio</div><img class="logo" src="{LOGO}" style="top:250px;width:330px">'
+     +f'<img class="logo" src="{LOGO}" style="top:1150px;width:210px">',33)
+    page(f"04-countdown-{l}",l,f'<div class="c kick" style="top:150px">Dream Ink · Studio</div><img class="logo" src="{LOGO}" style="top:250px;width:235px">'
      +H(150,t["s4"][0],760)+H(150,G%t["s4"][1],910)+f'<div class="c small" style="top:1230px">{t["s4s"]}</div><div class="box" style="top:1310px"></div>',44)
-    page(f"05-book-{l}",l,f'<div class="c kick" style="top:150px">{t["loc"]}</div><img class="logo" src="{LOGO}" style="top:240px;width:380px">'
+    page(f"05-book-{l}",l,f'<div class="c kick" style="top:150px">{t["loc"]}</div><img class="logo" src="{LOGO}" style="top:240px;width:265px">'
      +H(96,t["s5"][0],760)+H(96,G%t["s5"][1],880)+H(96,t["s5"][2],1000)+f'<div class="c" style="top:1280px"><span class="cta">{t["cta"]}</span></div><div class="c small" style="top:1440px">↑ {t["bio"]}</div>',55)
 print("stories ok")

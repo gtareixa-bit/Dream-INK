@@ -16,7 +16,7 @@ a{color:var(--g1)}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,9,11,.7),rgba(7,9,11,0) 25%,rgba(7,9,11,0) 70%,var(--ink))}
 .in{position:relative;z-index:2;padding:96px 20px 64px;display:flex;flex-direction:column;align-items:center}
 .kick,.tag{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--g2)}
-.logo{width:min(300px,62vw);height:auto;margin:22px 0 8px;filter:drop-shadow(0 0 40px rgba(212,169,90,.35))}
+.logo{width:min(240px,52vw);height:auto;margin:22px 0 8px;filter:drop-shadow(0 0 40px rgba(212,169,90,.35))}
 h1{font:500 clamp(44px,11vw,96px)/1 Cinzel;letter-spacing:.12em;text-transform:uppercase}
 .studio{font:500 clamp(16px,3.4vw,24px) Cinzel;letter-spacing:.7em;padding-left:.7em;text-transform:uppercase;color:var(--g1);margin:6px 0 18px}
 .tag{color:var(--tx)}.old{font:italic 400 20px Cormorant;color:var(--g2);margin:10px 0 30px}
