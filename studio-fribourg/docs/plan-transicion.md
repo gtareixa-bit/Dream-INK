@@ -2,7 +2,7 @@
 
 **Principio:** el nombre cambia, la autoridad NO se pierde. Durante 12 meses todo lo público dice «Dream Ink Studio (ex Buda Tattoo)». Quien busque «buda tattoo fribourg» debe llegar a Dream Ink y entender en 2 segundos que es el mismo estudio.
 
-## 1. Preparación (D-14 → D-1) — sin publicar nada
+## 1. Preparación (hasta el 24/11) — sin publicar nada
 | Tarea | Detalle |
 |---|---|
 | Inventario de activos SEO | Dominio, URLs con tráfico (Search Console → Páginas), perfil Google, reseñas, Instagram, Facebook, TikTok, directorios, enlaces entrantes |
@@ -13,15 +13,17 @@
 | Mensaje a clientes | Plantilla abajo (WhatsApp / email) |
 | Confirmar | Que las citas ya reservadas siguen válidas y qué dato de contacto cambia (si alguno) antes de comunicarlo |
 
-## 2. Cuenta atrás (D-3 → D-1)
-| Día | Historia | Sticker |
+## 2. Cuenta atrás — LANZAMIENTO: miércoles 25 de noviembre de 2026, 18:00 (hora Suiza)
+| Cuándo | Historia (`stories/<idioma>/`) | Sticker / acción |
 |---|---|---|
-| D-3 | `00a-teaser-j3` (+ `04-countdown`) | Cuenta atrás hasta D |
-| D-2 | `00b-teaser-j2` | Cuenta atrás |
-| D-1 | `00c-teaser-j1` | Cuenta atrás + «Avisarme» |
-Tu teaser «Tout va changer» ya publicado actúa como D‑4. Cada historia: sin revelar logo hasta D.
+| **Hoy dom 22/11 (J‑3)** | `00a-teaser-j3` + `04-countdown` | **Cuenta atrás hasta 25/11 18:00** en el marco vacío. Nada más cambia hoy |
+| Lun 23/11 (J‑2) | `00b-teaser-j2` | Cuenta atrás. Por la tarde: confirmar contacto/citas, cambios de Google/web en borrador |
+| Mar 24/11 (J‑1) | `00c-teaser-j1` + `00d-date` | Cuenta atrás + «Avisarme». Dejar todo listo (staging web, 301, publicaciones programables) |
+| **Mié 25/11 (D)** | ver sección 3 | Revelación a las 18:00 |
+Tu teaser «Tout va changer» ya publicado actúa como D‑4. Hasta D no se muestra el logo.
+Tareas urgentes antes del miércoles: (1) publicar hoy `00a` + `04` con la cuenta atrás; (2) decidir idioma principal por historia (FR+DE alternando); (3) confirmar citas ya reservadas y contacto; (4) tener fotos/vídeo reales del equipo para el Reel.
 
-## 3. Día D (reveal) — todo en 2 horas, 18:00–20:00 (Suiza)
+## 3. Día D — miércoles 25/11 (reveal) — todo en 2 horas, 18:00–20:00 (Suiza)
 1. **Primero cambia por dentro:** nombre y @usuario de Instagram (mismo perfil = se conservan seguidores), foto (`brand/logo/dream-ink-avatar-512.png`), bio (ver `estrategia-perfil.md`), Google Business, Facebook, web (publicar), firma de email.
 2. **Feed:** carrusel `posts/fr/post-c1…c7` (1 publicación, 7 diapositivas). **Después** los 6 recortes del panel (`profile-grid/subir-1…6`, en ese orden, seguidos). Así el carrusel queda en la 3.ª fila y el panel gigante arriba.
 3. **Historias (orden):** `01-reveal` → `02-symbol` → `03-level` → `07-same-account` → `05-book`. Fija `01-reveal` en destacadas «Nouveau».
@@ -31,12 +33,12 @@ Tu teaser «Tout va changer» ya publicado actúa como D‑4. Cada historia: sin
 ## 4. Mantener impulso (D+1 → D+30)
 | Día | Contenido |
 |---|---|
-| D+1 | Historia `06-merci` + repost de felicitaciones |
-| D+2 | Post `post-swap` (comparador de nombre) |
-| D+3 | Historia `08-stays` + `09-poll` |
-| D+4 | Post `post-merci` + historia `10-questions` |
+| D+1 (jue 26/11) | Historia `06-merci` + repost de felicitaciones |
+| D+2 (vie 27/11) | Post `post-swap` (comparador de nombre) |
+| D+3 (sáb 28/11) | Historia `08-stays` + `09-poll` |
+| D+4 (dom 29/11) | Post `post-merci` + historia `10-questions` |
 | D+5…14 | 1 Reel/semana (proceso, equipo, antes/después de tatuajes con permiso) + 3–5 historias/día |
-| D+30 | Post «1 mes Dream Ink» con resultados y reseñas |
+| D+30 (vie 25/12 → mejor sáb 26/12) | Post «1 mes Dream Ink» con resultados y reseñas |
 Publica posts nuevos **de 3 en 3** (post-swap, post-merci + uno propio) para no descuadrar el panel; o usa Reels e historias esos días.
 
 ## 5. SEO: cómo aprovechar los 5 años

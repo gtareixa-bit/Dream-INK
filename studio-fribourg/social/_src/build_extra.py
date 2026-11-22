@@ -53,12 +53,16 @@ X.update({
   p2=("5 Jahre. Ein Team.","Ein Wunsch:","weiter gehen."),p5="Ein neues Symbol.",p5s="I + D · der Mond, die Tinte, der Traum",
   p7=("Dein nächstes","Tattoo","beginnt hier."),share="Teile es mit einem Freund aus Freiburg",save="Speichere diesen Post",
   swapk="Neuer Name · Gleiches Team",swap2="Neues Niveau.",pm=("Danke,","Freiburg."),pms="5 Jahre Vertrauen.<br>Das nächste Kapitel beginnt jetzt.",ex="Früher Buda Tattoo")})
+DATE={"fr":("Mercredi 25 novembre","Mercredi","novembre"),"de":("Mittwoch, 25. November","Mittwoch","November"),"es":("Miércoles 25 de noviembre","Miércoles","noviembre"),
+ "pt":("Quarta-feira, 25 de novembro","Quarta-feira","novembro"),"en":("Wednesday, November 25","Wednesday","November")}
+UN={"fr":("jour","jours"),"de":("Tag","Tage"),"es":("día","días"),"pt":("dia","dias"),"en":("day","days")}
 for l,x in X.items():
     t=T[l]; K=f'<div class="c kick" style="top:150px">%s</div>'
     # ---- historias
-    for n,key,s,top in (("00a-teaser-j3","j3",1,"J-3"),("00b-teaser-j2","j2",2,"J-2"),("00c-teaser-j1","j1",3,"J-1")):
+    for n,key,s,top in (("00a-teaser-j3","j3",1,"3"),("00b-teaser-j2","j2",2,"2"),("00c-teaser-j1","j1",3,"1")):
         a,b=x[key]
-        page(f"{n}-{l}",l,K%"Dream Ink · Studio"+f'<div class="c h gold" style="top:380px;font-size:300px">{top}</div>'+H(112,a,800)+H(112,G%b,930)+c(1230,x["cd"],"small")+box(1310),70+s)
+        page(f"{n}-{l}",l,K%DATE[l][0]+f'<div class="c h gold" style="top:380px;font-size:300px">{top}</div>'+c(700,UN[l][0 if top=='1' else 1],'small','font-size:40px;letter-spacing:.3em')+H(112,a,800)+H(112,G%b,930)+c(1230,x["cd"],"small")+box(1310),70+s)
+    page(f"00d-date-{l}",l,K%"Dream Ink · Studio"+c(430,DATE[l][1],"sub","font-size:64px;letter-spacing:.12em")+f'<div class="c h gold" style="top:540px;font-size:330px">25.11</div>'+c(960,t["same"],"sub","font-size:42px")+logo(1120,260),69)
     page(f"06-merci-{l}",l,K%x["merci"][1]+H(210,G%x["merci"][0],560)+c(900,x["merci"][2],"sub","font-size:48px;line-height:1.4")+logo(1230,200),61)
     page(f"07-same-account-{l}",l,K%"Dream Ink · Studio"+H(110,x["same"][0],620)+H(110,G%x["same"][1],750)+c(1010,x["same"][2],"sub","font-size:42px;line-height:1.45;letter-spacing:.01em")+logo(1260,220),62)
     page(f"08-stays-{l}",l,K%t["same"]+c(430,x["chg"],"small")+"".join(c(500+i*85,v,"sub","font-size:54px") for i,v in enumerate(x["chg_l"]))

@@ -7,7 +7,7 @@ studio-fribourg/
 │  └─ fonts/   Cinzel (títulos) · Cormorant Garamond itálica (frases) · Montserrat (texto)  — OFL, libres
 ├─ web/        sitio listo para subir en 5 idiomas (FR en /, DE /de/, ES /es/, PT /pt/, EN /en/) con hreflang. Estático: index.html, config.js, assets/
 ├─ social/
-│  ├─ stories/{fr,de,es,pt,en}   13 historias 1080×1920 por idioma (JPG) (teasers J-3/2/1, reveal, símbolo, nivel, cuenta atrás, reservar, merci, mismo compte, cambia/queda, sondeo, preguntas)
+│  ├─ stories/{fr,de,es,pt,en}   14 historias 1080×1920 por idioma (incl. `00d-date`: miércoles 25.11) (JPG) (teasers J-3/2/1, reveal, símbolo, nivel, cuenta atrás, reservar, merci, mismo compte, cambia/queda, sondeo, preguntas)
 │  ├─ posts/{fr,de,es,pt,en}       feed 1080×1440: carrusel de 7 (c1…c7) + post-swap + post-merci
 │  ├─ profile-grid/{fr,de,es,pt,en}/  6 recortes 1080×1440 (3:4) + _vista-previa.jpg por idioma
 │  └─ _src/                    build.py + render.js (regenerar/editar textos)
