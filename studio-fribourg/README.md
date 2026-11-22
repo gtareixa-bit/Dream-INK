@@ -13,6 +13,6 @@ studio-fribourg/
 └─ docs/estrategia-perfil.md   cambio de panel, orden de publicación, captions, bio, checklist web
 ```
 Paleta: negro `#07090b` · oro `#f5e1ae → #d4a95a → #9c6e2e` · acento turquesa `#2fd9c4` (solo detalles).
-Regenerar historias/grid: `cd social/_src && python3 build.py && node render.js` (requiere playwright).
+Regenerar historias/grid: `cd social/_src && python3 build.py && python3 build_stories.py && node render.js` (requiere playwright). Historias con la estética del teaser «Tout va changer» (negro, ondas doradas, Playfair + Montserrat); panel de perfil con estatuas + logo ID.
 Regenerar web: `python3 web/build.py`.
 El `index.html` de la raíz del repo (Dream Ink Valencia) **no se ha tocado**.
